@@ -42,6 +42,7 @@ THIRD_PARTY_APPS = []
 
 PROJECT_APPS = [
     "main.apps.MainConfig",
+    "users.apps.UsersConfig",
 ]
 
 
@@ -142,3 +143,9 @@ print(GOOGLE_RECAPTCHA_KEY, GOOGLE_RECAPTCHA_SECRET, GOOGLE_API_KEY)
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_URL = "users:login"
+LOGIN_REDIRECT_URL = "users:profile"
+LOGOUT_REDIRECT_URL = "users:login"
+
+BASE_COUNTRY = "UK"
